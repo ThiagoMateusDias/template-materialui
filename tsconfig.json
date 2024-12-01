@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // Define a versão do JavaScript emitido.
+    "module": "commonjs", // Define o sistema de módulos como CommonJS.
+    "jsx": "react", // Suporte para JSX no estilo React.
+    "esModuleInterop": true, // Suporte para importações de módulos CommonJS.
+    "forceConsistentCasingInFileNames": true, // Obriga o uso de maiúsculas/minúsculas consistentes.
+    "strict": true, // Habilita verificações estritas do TypeScript.
+    "skipLibCheck": true, // Ignora a verificação de tipos em arquivos .d.ts.
+    "allowJs": true, // Permite incluir arquivos JavaScript.
+    "checkJs": false, // Desativa verificação de tipos em arquivos JS.
+    "outDir": "dist" // Define a saída dos arquivos compilados.
+  },
+  "include": [
+    "src/**/*", // Inclui todos os arquivos dentro de `src`.
+    "**/*.js", // Permite arquivos JS em qualquer lugar.
+    "**/*.jsx" // Permite arquivos JSX em qualquer lugar.
+  ],
+  "exclude": [
+    "node_modules", // Exclui arquivos da pasta `node_modules`.
+    "dist", // Exclui a saída da compilação.
+    "build" // Exclui a pasta `build` (se existir).
+  ]
+}

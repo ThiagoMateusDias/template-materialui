@@ -85,7 +85,7 @@ const Login = () => {
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
-          backgroundColor: "#f5f5f5",
+          background: "linear-gradient(45deg, #ff6f61, #ffcc5c)",
           padding: 2,
         }}
       >
@@ -95,8 +95,9 @@ const Login = () => {
             maxWidth: 400,
             padding: 4,
             backgroundColor: "white",
-            borderRadius: 2,
-            boxShadow: 3,
+            borderRadius: 4,
+            boxShadow: 10,
+            textAlign: "center",
           }}
         >
           <Grid container spacing={2}>
@@ -108,8 +109,19 @@ const Login = () => {
                   value={login}
                   onChange={(e) => setLogin(e.target.value)}
                   placeholder="Digite seu login"
+                  sx={{
+                    borderRadius: 2,
+                    border: "1px solid #ccc",
+                    padding: "12px 14px",
+                    "&:focus": {
+                      borderColor: "#ff6f61",
+                    },
+                  }}
                 />
-                <FormHelperText id="login_nome_helper_text">
+                <FormHelperText
+                  id="login_nome_helper_text"
+                  sx={{ color: "#777" }}
+                >
                   Login
                 </FormHelperText>
               </FormControl>
@@ -124,15 +136,36 @@ const Login = () => {
                   value={senha}
                   onChange={(e) => setSenha(e.target.value)}
                   placeholder="Digite sua senha"
+                  sx={{
+                    borderRadius: 2,
+                    border: "1px solid #ccc",
+                    padding: "12px 14px",
+                    "&:focus": {
+                      borderColor: "#ff6f61",
+                    },
+                  }}
                 />
-                <FormHelperText id="login_senha_helper_text">
+                <FormHelperText
+                  id="login_senha_helper_text"
+                  sx={{ color: "#777" }}
+                >
                   Senha
                 </FormHelperText>
               </FormControl>
             </Grid>
 
             <Grid item xs={12}>
-              <Button variant="contained" color="primary" fullWidth>
+              <Button
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{
+                  backgroundColor: "#ff6f61",
+                  "&:hover": {
+                    backgroundColor: "#ff3b30",
+                  },
+                }}
+              >
                 Entrar
               </Button>
             </Grid>
